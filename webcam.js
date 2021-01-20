@@ -41,7 +41,7 @@ var Webcam = {
 	loaded: false,   // true when webcam movie finishes loading
 	live: false,     // true when webcam is initialized and ready to snap
 	userMedia: true, // true when getUserMedia is supported natively
-
+	facingMode: "environment",
 	iOS: /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream,
 
 	params: {
@@ -49,7 +49,7 @@ var Webcam = {
 		height: 0,
 		dest_width: 0,         // size of captured image
 		dest_height: 0,        // these default to width/height
-		facingMode: "environment",
+		
 		image_format: 'jpeg',  // image format (may be jpeg or png)
 		jpeg_quality: 90,      // jpeg image quality from 0 (worst) to 100 (best)
 		enable_flash: true,    // enable flash fallback,
